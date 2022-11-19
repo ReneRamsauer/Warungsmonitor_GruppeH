@@ -17,9 +17,24 @@ public class MaintananceMonitorController {
         this.monService = monService;
     }
 
-    @GetMapping("/home")
+    @GetMapping("")
     public String home() {
         return "home";
     }
+
+    @GetMapping("/wartung")
+    String getSum(Model model) {
+        int number = 4;
+        model.addAttribute("number", number);
+
+        if((number % 2) == 0) {
+            model.addAttribute("color", "#123321");
+        } else {
+            model.addAttribute("color", "#321123");
+        }
+
+        return "number";
+    }
+
 
 }
