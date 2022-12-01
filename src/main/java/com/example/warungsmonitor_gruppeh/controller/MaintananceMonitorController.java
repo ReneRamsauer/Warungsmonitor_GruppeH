@@ -19,11 +19,6 @@ public class MaintananceMonitorController {
         return "home";
     }
 
-    @PostMapping("/wartung/{text}")
-    void storeMessage(@PathVariable("text") String text) {
-        monService.setMessage(text);
-    }
-
     @GetMapping("/wartung")
     String wartung(Model model) {
         String ok = "200 OK";
@@ -36,8 +31,17 @@ public class MaintananceMonitorController {
             model.addAttribute("color", "#f54842");
         }
 
-        return monService.getMessage();
+        return "wartung";
     }
+
+    @GetMapping("/text/{text}")
+    @ResponseBody
+    String mes(@PathVariable String text){
+        monService.setMessage(text);
+
+        return text;
+    }
+
 /*
     @PostMapping("/setwartung/{message}")
     void storeMessage(@PathVariable String message) {
