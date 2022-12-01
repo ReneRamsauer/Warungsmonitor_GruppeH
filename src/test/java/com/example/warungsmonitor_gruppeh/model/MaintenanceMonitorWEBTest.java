@@ -8,7 +8,6 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 
 public class MaintenanceMonitorWEBTest {
 
-
     private final MaintannanceMonitorService monService = new MaintannanceMonitorService();
 
     /*Initial Test*/
