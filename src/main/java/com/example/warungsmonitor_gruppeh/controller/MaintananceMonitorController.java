@@ -3,12 +3,9 @@ package com.example.warungsmonitor_gruppeh.controller;
 import com.example.warungsmonitor_gruppeh.service.MaintannanceMonitorService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-@RestController
+@Controller
 public class MaintananceMonitorController {
 
     private final MaintannanceMonitorService monService;
@@ -17,24 +14,36 @@ public class MaintananceMonitorController {
         this.monService = monService;
     }
 
-    @GetMapping("")
+    @GetMapping("/home")
     public String home() {
         return "home";
     }
 
-    @GetMapping("/wartung")
-    String getSum(Model model) {
-        int number = 4;
-        model.addAttribute("number", number);
+    @PostMapping("/wartung/{text}")
+    void storeMessage(@PathVariable("text") String text) {
+        monService.setMessage(text);
+    }
 
-        if((number % 2) == 0) {
-            model.addAttribute("color", "#123321");
+    @GetMapping("/wartung")
+    String wartung(Model model) {
+        String ok = "200 OK";
+        String message = monService.getMessage();
+        model.addAttribute("message", message);
+
+        if(ok.equals(monService.getMessage())) {
+            model.addAttribute("color", "#42f557");
         } else {
-            model.addAttribute("color", "#321123");
+            model.addAttribute("color", "#f54842");
         }
 
-        return "number";
+        return monService.getMessage();
     }
+/*
+    @PostMapping("/setwartung/{message}")
+    void storeMessage(@PathVariable String message) {
+        monService.setMessage(message);
+    }
+*/
 
 
 }
