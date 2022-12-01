@@ -11,6 +11,7 @@ public class MaintenanceMonitorWEBTest {
 
     private final MaintannanceMonitorService monService = new MaintannanceMonitorService();
 
+    /*Initial Test*/
     @Test
     void testDefaultState() {
         assertNull(null, monService.getMessage());
