@@ -15,6 +15,9 @@ public class Monitor {
     public Monitor(String message) {
         Message = message;
     }
+    public Monitor() {
+
+    }
 
 
 }
