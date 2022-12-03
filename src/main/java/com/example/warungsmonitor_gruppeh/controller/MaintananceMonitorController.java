@@ -54,12 +54,5 @@ public class MaintananceMonitorController {
         return text;
     }
 
-/*
-    @PostMapping("/setwartung/{message}")
-    void storeMessage(@PathVariable String message) {
-        monService.setMessage(message);
-    }
-*/
-
 
 }
