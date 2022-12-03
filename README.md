@@ -6,7 +6,7 @@ Daniel Moll (ic21b044@technikum-wien.at)
 
 ---
 
-### 1. About STMicroelectronics NUCLEO-L432KC
+### 1. About Wartungsmonitor
 
 In diesem Projekt wurde eine RestAPI-Schnittstelle mit Hilfe von Software-Lifecycle-Managment Tools entwickelt.
 
