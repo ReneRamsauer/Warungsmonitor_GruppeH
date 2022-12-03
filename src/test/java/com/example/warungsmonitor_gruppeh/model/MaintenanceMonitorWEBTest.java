@@ -18,11 +18,19 @@ public class MaintenanceMonitorWEBTest {
 
     /*Set Meesage Test*/
     @Test
-    void testsetMessage() {
-        String setMessage = ("Ich bin ein Test");
-        monService.setMessage("setMessage");
+    void testSetMessage() {
+        String testMessage = ("Ich bin ein Test");
+        monService.setMessage(testMessage);
 
-        assertEquals(setMessage, setMessage);
+        assertEquals(testMessage, monService.getMessage());
+    }
+
+    @Test
+    void testResetMessage() {
+
+        monService.setMessage("setMessage");
+        monService.resetMessage();
+        assertNull(null, monService.getMessage());
     }
 
 }
