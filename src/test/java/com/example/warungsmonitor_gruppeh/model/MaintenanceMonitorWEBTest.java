@@ -16,4 +16,21 @@ public class MaintenanceMonitorWEBTest {
         assertNull(null, monService.getMessage());
     }
 
+    /*Set Meesage Test*/
+    @Test
+    void testSetMessage() {
+        String testMessage = ("Ich bin ein Test");
+        monService.setMessage(testMessage);
+
+        assertEquals(testMessage, monService.getMessage());
+    }
+
+    @Test
+    void testResetMessage() {
+
+        monService.setMessage("setMessage");
+        monService.resetMessage();
+        assertNull(null, monService.getMessage());
+    }
+
 }

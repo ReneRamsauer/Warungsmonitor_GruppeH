@@ -1,20 +1,25 @@
 package com.example.warungsmonitor_gruppeh.service;
 
+import com.example.warungsmonitor_gruppeh.dto.Monitor;
 import org.springframework.stereotype.Service;
 
 @Service
 public class MaintannanceMonitorService {
 
-    String Message;
+    private final Monitor mon = new Monitor();
 
     public MaintannanceMonitorService() {
     }
 
     public String getMessage() {
-        return Message;
+        return mon.getMessage();
     }
 
     public void setMessage(String message) {
-        Message = message;
+        mon.setMessage(message);
+    }
+
+    public void resetMessage() {
+        mon.setMessage("");
     }
 }
