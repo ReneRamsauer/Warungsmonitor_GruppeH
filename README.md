@@ -30,6 +30,13 @@ Wenn der Monitor über seine Schnittstelle den Wert "ok" erhält, ändert sich d
 ![image](https://user-images.githubusercontent.com/115585009/205461575-e4ac85cb-646d-4da3-883f-2d60ab8cd3fb.png)
 
 
+Mit der Adresse http://localhost:8080/wartung/reset kann die eingegeben Message zurück gesetzt werden:
+![image](https://user-images.githubusercontent.com/115585009/205492533-db154f7c-2ebd-4491-bcef-f74dc7fc6d97.png)
+
+Message wurde zurückgesetzt:
+![image](https://user-images.githubusercontent.com/115585009/205492553-24480060-7867-4b85-8c9d-aae8647381d0.png)
+
+
 
 <!-- CONTACT -->
 ## 3. Contact
