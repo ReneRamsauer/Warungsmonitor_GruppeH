@@ -1,5 +1,6 @@
 package com.example.warungsmonitor_gruppeh.model;
 
+import com.example.warungsmonitor_gruppeh.controller.MaintananceMonitorController;
 import com.example.warungsmonitor_gruppeh.service.MaintannanceMonitorService;
 import org.junit.jupiter.api.Test;
 
@@ -32,5 +33,6 @@ public class MaintenanceMonitorWEBTest {
         monService.resetMessage();
         assertNull(null, monService.getMessage());
     }
+
 
 }
