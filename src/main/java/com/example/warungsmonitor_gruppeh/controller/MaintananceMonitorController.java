@@ -41,6 +41,7 @@ public class MaintananceMonitorController {
     }
 
     @GetMapping("/wartung/reset")
+    @ResponseBody
     String reset() {
 
         monService.resetMessage();
